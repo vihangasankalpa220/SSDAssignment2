@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSD Assignment 2</title>
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        padding-top: 80px;
+        word-wrap: break-word;
+      }
+    </style>
+
+
+    <style>
+
+      .portfolio{
+        padding:6%;
+        text-align:center;
+      }
+      .heading{
+        background: #fff;
+        padding: 1%;
+        text-align: left;
+        box-shadow: 0px 0px 4px 0px #545b62;
+      }
+      .heading img{
+        width: 10%;
+      }
+      .bio-image{
+        margin-top: -17px;
+        text-align:center;
+        margin-left: 850px;
+      }
+      .bio-image img{
+       width: 120px;
+        border-radius:50%;
+        margin-left: 50px;
+        margin-top: -95px;
+      }
+      .bio-content p{
+        font-weight:600;
+        font-size:30px;
+      }
+      .btn-primary{
+        margin-left: 1050px;
+        margin-top: -257px;
+        width: 120px;
+        height: 40px;
+      }
+      .btn-success{
+        margin-left: 1050px;
+        margin-top: -97px;
+        width: 120px;
+        height: 40px;
+      }
+      .btn-secondary{
+        width: 120px;
+        height: 60px;
+        font-size: 60px;
+      }
+      .bodycontent{
+        background-image: url('https://image.freepik.com/free-photo/elevated-view-pink-green-grey-cardboard-papers-yellow-background_23-2147878535.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body id="page-top" class="bodycontent">
+    <div class="container">
+
+      <h1 align="center" style="font-size: xx-large"><span class="fa fa-upload">Upload File </span></h1>
+      <h3 style="margin-top: 10px;"><span style="margin-left: 800px; "></span></h3>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="bio-image">
+                <img src="<%=profile_photo%>" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="bio-content">
+
+        <a href="/logout" class="btn btn-success"><h3>Logout Now</h3></a>
+      </div>
+
+        <div class="bio-content">
+
+          <a href="/viewprofile" class="btn btn-primary"><h3>View Profile</h3></a>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well" style="width: 1200px; margin-left: -8%;">
+            <% if (complete) { %>
+            <div class="alert alert-success alert-dismissible" >
+              <a  class="close" data-dismiss="alert" aria-label="close"
+                >×</a
+              >
+              <strong>Okay!</strong> Your File is Uploaded Completely!
+            </div>
+            <%}%>
+            <form action="/drivesave" method="POST" enctype="multipart/form-data" >
+              <div class="form-group">
+                <input type="file" class="form-control" name="file" required id=""/>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-block btn-secondary">
+                  Upload File
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
